@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Success</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="wrapper">
+  {% if newuser %}
+    <div id="green">
+      <h2>The user infor you entered:</h2>
+        <h3>{{ newuser['first_name'] }} {{ newuser['last_name'] }}</h3>
+        <h3>{{ newuser['email'] }}</h3>
+      <h2>was created successfull!  Thank you!</h2>
+    </div>
+  {% endif %}
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+        <p class="flash">{{message}}</p>
+      {% endfor %}
+    {% endif %}
+  {% endwith %}
+
+  <h1>All Users:</h1>
+  <hr>
+  {% for users in all_users: %}
+    <div class="unitcontainer"><div class="usercontainer">
+        <p class="left">{{ users['first_name'] }} {{ users['last_name'] }}</p> <p class="center">{{ users['email'] }}</p><p class="right">{{ users['created_at'] }}</p>
+      </div>
+      <a href="/delete/{{ users['id'] }}"><img src="{{ url_for('static', filename='img/redx.png') }}" alt="delete"></a>
+    </div>
+    <hr>
+  {% endfor %}
+
+
+
+</div>
+</body>
+</html>

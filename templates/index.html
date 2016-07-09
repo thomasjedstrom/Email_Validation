@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="wrapper">
+  <h1>Create Users!</h1>
+
+  {{ error }}
+  <div id="formcontainer">
+    <form action="/success" method="POST">
+      <label for="first_name">First Name:<input type="text" name="first_name" id="first_name"></label><br>
+      <label for="last_name">Last Name:<input type="text" name="last_name" id="last_name"></label><br>
+      <label for="email">Email:<input type="text" name="email" id="email"></label><br>
+      <input type="submit" value="Add User" class="button" id="add"><br>
+    </form>
+  </div>
+  <p>OR</p>
+  <a href="/users" class="button">See All Users</a>
+
+
+
+
+
+<!-- {{ all_friends }}
+
+<h1>These are all my friends!</h1>
+
+{% for friend in all_friends: %}
+   <p>ID: {{ friend['id'] }}</p>
+   <p>First Name: {{ friend['first_name'] }}</p>
+   <p>Last Name: {{ friend['last_name'] }}</p>
+   <p>Occupation: {{ friend['occupation'] }}</p>
+   <hr>
+{% endfor %} -->
+
+
+
+
+</div>
+</body>
+</html>

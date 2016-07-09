@@ -1,0 +1,99 @@
+*{
+    font-family: sans-serif;
+    text-align: center;
+}
+#wrapper{
+    max-width: 800px;
+    margin: auto;
+    border: 25px inset gray;
+    padding: 30px;
+    background: lightgray;
+}
+#error{
+    background: red;
+    color: white;
+    border: 3px solid black;
+    box-shadow: 0px 5px 5px black;
+    padding: 5px;
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 40px;
+}
+label{
+    font-size: 1.5em;
+}
+input{
+    font-size: 1em;
+    margin-bottom: 6px;
+}
+form{
+    text-align: right;
+}
+#formcontainer{
+    margin: auto;
+    max-width: 380px;
+}
+#green{
+    text-align: center;
+    background: green;
+    max-width: 700px;
+    margin: auto;
+    border: 3px solid black;
+    box-shadow: 5px 5px 5px black;
+}
+.button{
+    display: block;
+    width: 115px;
+    height: 25px;
+    background: #0095FF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 5px 5px gray;
+    margin: auto;
+}
+#add{
+    padding: 20px;
+    font-size: 1em;
+}
+h1{
+    text-align: center;
+}
+h3{
+    margin: 3px;
+}
+.unitcontainer{
+    max-width: 840px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+.usercontainer{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 800px;
+}
+.left{
+    text-align: left;
+    /*display: inline-block;*/
+}
+.center{
+    text-align: center;
+    /*display: inline-block;*/
+}
+.right{
+    text-align: right;
+    /*display: inline-block;*/
+}
+img{
+    height: 20px;
+    width: 20px;
+}
+
+.flash{
+    color: red;
+}
